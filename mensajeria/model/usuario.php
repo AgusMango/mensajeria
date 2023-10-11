@@ -8,12 +8,16 @@ class Usuario {
 
     // Metodos
 
-    public function crear($user){
-
+    public function crear($usern,$password, $name, $type){
+        $this->username = $usern;
+        $this->pass = $password;
+        $this->nombre = $name;
+        $this->tipo = $type;
+        
     }
 
     public function editar(){
-
+            
     }
 
     public function eliminar(){

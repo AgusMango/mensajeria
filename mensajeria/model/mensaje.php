@@ -9,7 +9,7 @@ class Mensaje {
     // Metodos
 
     function crearMensaje(){
-
+             
     }
 
     function editarMensaje(){
