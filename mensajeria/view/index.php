@@ -3,7 +3,6 @@ if(isset($_POST["reg"])){
     header("location:registro.php");
 }
 if(isset($_POST["btiniciarsesion"])){
-    $nombre = $_POST["nombre"];
     $usuario = $_POST["user"];
     $password = $_POST["password"];
     

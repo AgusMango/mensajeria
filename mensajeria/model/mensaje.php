@@ -8,7 +8,7 @@ class Mensaje {
 
     // Metodos
 
-    function crearMensaje(){
+    function crearMensaje($e,$d,$a,$c){
              
     }
 

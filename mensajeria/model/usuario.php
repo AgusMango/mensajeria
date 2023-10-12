@@ -5,10 +5,10 @@ class Usuario {
     private $pass;
     private $nombre;
     private $tipo;
-
+    private $id;
     // Metodos
 
-    public function crear($usern,$password, $name, $type){
+    public function __construct($usern,$password, $name, $type){
         $this->username = $usern;
         $this->pass = $password;
         $this->nombre = $name;
@@ -35,7 +35,9 @@ class Usuario {
     public function get_tipo(){
         return $this->tipo;
     }
-
+    public function get_id(){
+        return $this->id;
+    }
 }
 
 ?>
