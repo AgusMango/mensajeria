@@ -1,12 +1,16 @@
 <?php
+    error_reporting(E_ALL);
+include_once("config.php");
+include_once("../controller/usuarioController.php");
+include_once("../model/usuario.php");
+
+
+
 if(isset($_POST["reg"])){
     header("location:registro.php");
 }
-if(isset($_POST["btiniciarsesion"])){
-    $usuario = $_POST["user"];
-    $password = $_POST["password"];
-    
-
+if(isset($_POST["log"])){
+    header("location:login.php");
 }
 ?>
 
@@ -23,12 +27,8 @@ if(isset($_POST["btiniciarsesion"])){
     <h1>Sistema de mensajería</h1>
     <h3>envia mensajes a otros usuarios</h3>
     <form action = "index.php" method="post">
-        <h4>Ingresá en tu cuenta: </h4>
-        Usuario: 
-        <input type="text" name="user" />
-        Contraseña: 
-        <input type="password" name="password" />
-        <input class = "btn" value = "iniciar sesión" name = "btiniciarsesion" type="submit" />
+        <h4>Inicia sesión en tu cuenta</h4>
+        <input class = "btn" value = "login" name = "log" type="submit" />
     </form>
     <form action = "index.php" method="post">
         <h5>No tenés cuenta?¡Registrate!</h5>

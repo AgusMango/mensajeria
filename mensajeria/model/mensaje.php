@@ -1,4 +1,5 @@
 <?php
+    error_reporting(E_ALL);
 class Mensaje {
     // Propiedades
     private $emisor;
@@ -6,10 +7,16 @@ class Mensaje {
     private $asunto;
     private $contenido;
 
+    private $editado;
+
     // Metodos
 
-    function crearMensaje($e,$d,$a,$c){
-             
+    function __construct($e,$d,$a,$c){
+             $this->emisor= $e;
+             $this->destinatario=$d;
+             $this->asunto=$a;
+             $this->contenido=$c;
+             $this->editado= 0;
     }
 
     function editarMensaje(){

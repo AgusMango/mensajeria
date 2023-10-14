@@ -1,12 +1,31 @@
 <?php
+    error_reporting(E_ALL);
+include_once("../model/usuario.php");
+include_once("../controller/usuarioController.php");
+include_once("../orm/dbuser.php");
+include_once("config.php");
 if(isset($_POST["regresar"])){
     header("location:index.php");
 }
 if(isset($_POST["btregistrarse"])){
     $nombre = $_POST["nombre"];
-    $usuario = $_POST["user"];
+    $usern = $_POST["user"];
     $password = $_POST["password"];
+    $aux = dbread_user($conexion,$usern);
+    if($aux->rowCount()){
+        echo 'USERNAME OCUPADO';
+    }
+    else{
 
+        $usr = new Usuario($usrn,$password,$nombre,1);
+        $query = dbcreate_user($usr,$conexion);
+        if($query){ 
+            echo 'USUARIO CREADO';
+        }
+        else{ 
+            echo "ERROR AL REGISTRAR: ". $query;
+        }
+    }
 }
 ?>
 

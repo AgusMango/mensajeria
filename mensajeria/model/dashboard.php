@@ -1,4 +1,5 @@
 <?php
+    error_reporting(E_ALL);
 class Dashboard {
     private $userList;
     private $sesion;

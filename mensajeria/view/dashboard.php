@@ -1,3 +1,18 @@
+<?php
+    error_reporting(E_ALL);
+include_once("../model/usuario.php");
+include_once("../controller/usuarioController.php");
+include_once("../model/mensaje.php");
+include_once("../controller/mensajeController.php");
+include_once("config.php");
+
+
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

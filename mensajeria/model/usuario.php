@@ -1,19 +1,21 @@
 <?php
+    error_reporting(E_ALL);
 class Usuario {
     //propiedades
     private $username;
     private $pass;
     private $nombre;
     private $tipo;
-    private $id;
     // Metodos
 
     public function __construct($usern,$password, $name, $type){
         $this->username = $usern;
         $this->pass = $password;
         $this->nombre = $name;
-        $this->tipo = $type;
-        
+        $this->tipo = $type; 
+    }
+    public static function estaLogeado(){
+        return isset($_SESSION["userLog"]);
     }
 
     public function editar(){
@@ -35,9 +37,10 @@ class Usuario {
     public function get_tipo(){
         return $this->tipo;
     }
-    public function get_id(){
+
+/*    public function get_id(){
         return $this->id;
-    }
+    }*/
 }
 
 ?>
