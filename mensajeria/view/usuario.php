@@ -1,3 +1,9 @@
+<?php
+    error_reporting(E_ALL);
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
